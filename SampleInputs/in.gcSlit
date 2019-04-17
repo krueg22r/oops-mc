@@ -1,0 +1,36 @@
+runName: gcSlit
+coordFile: gcSlit.dat
+topFile: gcSlitTop.dat
+steps: 3500000
+printEvery: 25
+equilLen: 1200000
+deltaLen: 0.0001
+delta: 0.3
+beta: 42
+dimension: 2
+gcFlag: 1
+chainLen: 10
+chainCharge: 0
+chargeFrac: 1
+chainSymbol: P
+gcEvery: 500
+nVec: 10
+qT: 1 
+chemPot: 5
+PairPot: LjCut 
+ljCutoff: 2.5
+P	
+sigma: 2.5
+epsilon: 0.14
+end
+bondPot: Spring
+kBond: 0.235
+r0: 2.5
+extPot: LjWall2
+cutoff: 1.0
+sigWall: 1.0
+epsilWall: 0.14
+P
+sigma: 1.0 
+epsilon: 0.28
+end

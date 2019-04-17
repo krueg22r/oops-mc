@@ -1,0 +1,20 @@
+runName: canonBulk
+coordFile: cBulk.dat
+topFile: cBulk.dat
+steps: 500
+printEvery: 25
+equilLen: 2
+deltaLen: 0.0001
+delta: 0.3
+beta: 42
+dimension: 2
+gcFlag: 0
+PairPot: LjCut 
+ljCutoff: 2.5
+P	
+sigma: 2.5
+epsilon: 0.14
+end
+bondPot: Spring
+kBond: 0.235
+r0: 2.5
