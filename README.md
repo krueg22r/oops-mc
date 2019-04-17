@@ -10,17 +10,21 @@ under confinement. Several polymer-specific MC moves are included to improve sam
 bias algorithm used in grand canonical simulations are described in Frenkel and Smit's Understanding Molecular Simulation. 
 
 Prerequisites
+
 The Eigen library is used for linear algebra operations. Packmol is used by the input generator to create initial simulation 
 configurations. 
 
 Installing
+
 A sample Makefile is provided. The program has been tested using g++-4.9. 
 
 Running the program
+
 The main input file uses keywords to supply simulation parameters and the names of files where molecular topology and initial 
 coordinates are supplied. The order of keywords does not matter, except for sections specifying force field parameters. 
 See the SampleInputs directory for several examples. The input file is provided as standard output. 
 
 Authors
+
 Rachel Krueger
 
