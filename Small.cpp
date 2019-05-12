@@ -4,7 +4,7 @@
 #include "Bead.h"
 using namespace std; 
 
-//bead-bead dist func that takes bead ptrs. from MC12 & earlier
+//bead-bead dist func that takes bead ptrs. 
 double getDist(Bead* b1, Bead* b2, double length[], int dimension){
         double dist = 0;
         for(int i = 0; i < 3; i++){
@@ -15,7 +15,7 @@ double getDist(Bead* b1, Bead* b2, double length[], int dimension){
         return sqrt(dist);
 }
 
-//bead-bead dist func that takes refs to beads. this is the MC13 way. 
+//bead-bead dist func that takes refs to beads
 double getDist(Bead& b1, Bead& b2, double length[], int dimension){
 	double dist = 0;
         for(int i = 0; i < 3; i++){
@@ -28,6 +28,7 @@ double getDist(Bead& b1, Bead& b2, double length[], int dimension){
 
 
 //fills in a vector with random point on unit sphere
+// just selecting three random numbers and normalizing doesn't work. 
 void randSphere(double vec[], mt19937& ranGen){
 	        double ransq = 2;
         double r1, r2;

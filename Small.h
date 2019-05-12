@@ -12,6 +12,8 @@ using namespace std;
 
 double getDist(Bead&, Bead&, double[], int); 
 double getDist(Bead*, Bead*, double[], int);
+// Below are adapted from Numerical Recipes in C. The Art 
+// of Scientific computing. 
 void randSphere(double[], mt19937&); 
 double gasdev(double, double, mt19937&);
 double pGauss(double, double, double);
