@@ -30,6 +30,7 @@ void BondPot::initMol(vector <Molecule>& mols, double length[], int dimension){
 	m_totOld += en;  
 }
 
+// if we removed a molecule, get rid of its energies 
 void BondPot::delMol(int toDel){
 	m_totOld -= arr_eOld[toDel]; 
 	arr_eOld.erase(arr_eOld.begin() + toDel); 
@@ -56,7 +57,9 @@ double BondPot::getVal(int arr, int ind){
                 return 1;
         }
 }
- 
+
+// after a move has occured, adjust energy according to whether 
+// accepted or not  
 void BondPot::resetEn(int activeMol, bool accepted){
 	if(accepted){
 		arr_eOld[activeMol] = arr_eTrial[activeMol]; 
@@ -80,6 +83,7 @@ double BondPot::totEn(){
 	return m_totOld; 
 }
 
+// print this energy contribution 
 void BondPot::printEn(ostream& out){
         out << setw(17) << setprecision(6) <<m_totOld;
 }

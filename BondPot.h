@@ -15,8 +15,6 @@
 #include "Molecule.h" 
 using namespace std; 
 
-
-
 class BondPot{
 	vector < double > arr_eOld; //stores energies in vectors 
         vector < double > arr_eTrial; //to avoid necessity of recalculating 

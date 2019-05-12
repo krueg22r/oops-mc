@@ -18,13 +18,14 @@ using namespace std;
 class CoulLjCut : public PairPot{
 	double m_ljCut; 
 	double m_coulCut; 
-	double m_dielectric; 
+	double m_dielectric; // This just scales the interaction strength 
 	map<string, double> sigmas; //potential keeps track of LJ params
 	map<string, double> epsilons; //in constrast to charges, which are bead attributes
 	public: 
 	CoulLjCut(); 
 	CoulLjCut(int); 
 	void readParam(); 
+	// Calculates energy between two beads 
 	double pairEn(Bead&, Bead&, double[], int); 	
 	void printHeader(ostream&); 
 }; 
