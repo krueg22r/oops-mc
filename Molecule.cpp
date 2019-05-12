@@ -45,6 +45,7 @@ void Molecule::addBead(Bead b){
 	m_size++; 
 }
 
+// add bead with coordinates + other info 
 void Molecule::addBead(string symbol, int id, int charge, double x, double y, double z){
 	monomers.push_back(Bead(symbol, id, charge, x, y, z)); 
 	monomers[m_size].setCoord(0,0,x); 
@@ -53,6 +54,7 @@ void Molecule::addBead(string symbol, int id, int charge, double x, double y, do
 	m_size++; 
 }
 
+// bonds
 void Molecule::addBond(int ind1, int ind2){
 	vector < int > bond = {ind1, ind2}; 
 	bonds.push_back(bond); 
@@ -63,11 +65,19 @@ int Molecule::nBond(){
 	return m_nBond; 
 }
 
+// angles 
+
 void Molecule::addAngle(int ind1, int ind2, int ind3){
 	vector < int > angle = {ind1, ind2, ind3}; 
 	angles.push_back(angle); 
 	m_nAngle++; 
 }
+
+int Molecule::nAngle(){
+	return m_nAngle; 
+}
+
+// dihedrals 
 
 void Molecule::addDihedral(int ind1, int ind2, int ind3, int ind4){
 	vector < int > di = {ind1, ind2, ind3, ind4};
@@ -75,18 +85,14 @@ void Molecule::addDihedral(int ind1, int ind2, int ind3, int ind4){
 	m_nAngle++;  
 }
 
+int Molecule::nDihedral(){
+	return m_nDihedral; 
+}
 //returns number of beads in molecule
 int Molecule::size(){
 	return m_size; 
 }
 
-int Molecule::nAngle(){
-	return m_nAngle; 
-}
-
-int Molecule::nDihedral(){
-	return m_nDihedral; 
-}
 
 //move functions! 
 
@@ -103,7 +109,7 @@ void Molecule::beadTranslate(double delta, mt19937& ranGen){
 	}
 }
 
-//translate a whole fucking molecule
+//translate a whole molecule
 void Molecule::comTranslate(double delta, mt19937& ranGen){
 	double vec[3];
         randSphere(vec, ranGen);
