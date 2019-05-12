@@ -1,4 +1,6 @@
 #include "ran1.h"
+
+// From Numerical Recipes in C. The Art of Scientific Computing. 
 double ran1(int &idum){
 	const int IA = 16807, IM = 2147483647, IQ = 127773, IR = 2836, NTAB = 32; 
 	const int NDIV = (1 + (IM-1)/NTAB); 
