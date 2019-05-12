@@ -1,5 +1,7 @@
 #include "LjWall2.h" 
-
+// This uses the potential obtained by integrating over 
+// a 2-d surface made up of LJ particles. 
+// Rather than 6-12, it ends up being 3-9. 
 
 using namespace std; 
 

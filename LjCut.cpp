@@ -1,7 +1,9 @@
 #include "LjCut.h"
 
+// pair potential to calculate energy between two beads according to 
+// E = 4 * epsilon * ((sigma/r)^12 - (sigma/r)^6)
 LjCut::LjCut(int nMol) : PairPot(nMol){
-	readParam(); 
+	readParam();  // get parameters from standard input 
 }
 
 LjCut::LjCut() : PairPot(){
