@@ -98,6 +98,7 @@ void Bead::setAllCoord(double pos[]){
 	}
 }
 
+//functions related to whether the bead was moved or not 
 
 void Bead::movedTrue(){
 	m_moved = true; 
@@ -110,6 +111,8 @@ void Bead::resetMoved(){
 bool Bead::moved(){
 	return m_moved; 
 }
+
+// particle information 
 
 void Bead::setType(int type){
 	m_type = type; 
@@ -126,6 +129,8 @@ void Bead::setSymbol(string symbol){
 void Bead::setCharge(int charge){
 	m_charge = charge; 
 }
+
+// adjust coordinates after move is accepted / rejected 
 
 void Bead::newToOld(){
 	for(int i = 0; i < 3; i++) posTrial[i] = posOld[i]; 
