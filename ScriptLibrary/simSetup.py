@@ -56,7 +56,8 @@ def main():
 	packInp.close()
 	#execute packmol 
 	with open("in.packmol","rb") as file: 
-		output = check_output(["/Users/rachelkrueger/packmol/packmol"], stdin=file)
+		packmolPath = "/Users/rachelkrueger/packmol/packmol"
+		output = check_output(["packmolPath"], stdin=file)
 		#change above to your path to packmol!
 	#open packmol's output xyz file for reading
 	xyz = open('packOut.xyz','r')	

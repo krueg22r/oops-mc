@@ -7,24 +7,33 @@ potentials (which depend on the relative position of two arbitrary particles), b
 of particles in the same molecule), and external potentials (which depend on the position of each atom in the simulation box). 
 The provided potentials may be used to perform coarse-grained bead-spring polymer simulations in periodic simulation boxes or 
 under confinement. Several polymer-specific MC moves are included to improve sampling. The basic algorithm and the configurational
-bias algorithm used in grand canonical simulations are described in Frenkel and Smit's Understanding Molecular Simulation. 
+bias algorithm used in grand canonical simulations are described in Frenkel and Smit's Understanding Molecular Simulation. The Wikipedia page on 
+Monte Carlo method in statistical physics gives a nice overview: 
+https://en.wikipedia.org/wiki/Monte_Carlo_method_in_statistical_physics. 
 
-Prerequisites
+## Prerequisites
 
-The Eigen library is used for linear algebra operations. Packmol is used by the input generator to create initial simulation 
+The Eigen library (http://eigen.tuxfamily.org/index.php?title=Main_Page)
+is used for linear algebra operations. 
+Packmol (http://m3g.iqm.unicamp.br/packmol/home.shtml) 
+is used by the input generator to create initial simulation 
 configurations. 
 
-Installing
+## Installing
 
 A sample Makefile is provided. The program has been tested using g++-4.9. 
 
-Running the program
+## Running the program
 
 The main input file uses keywords to supply simulation parameters and the names of files where molecular topology and initial 
 coordinates are supplied. The order of keywords does not matter, except for sections specifying force field parameters. 
 See the SampleInputs directory for several examples. The input file is provided as standard output. 
 
-Authors
+For example, to run the sample grand canonical bulk simulation on the command 
+line, enter: 
+./mc <in.gcBulk >out.gcBulk &
+
+## Authors
 
 Rachel Krueger
 
