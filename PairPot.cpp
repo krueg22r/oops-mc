@@ -93,7 +93,7 @@ void PairPot::initMol(vector < Molecule >& mols, double length[], int dimension)
 		}
 	}
 }
-
+// calculate the energy change associated with a move 
 double PairPot::deltaEnMove(vector < Molecule >& mols, int activeMol, double length[], int dimension){
 	m_deTrial = 0;
 	//all pairs in mol that moved 
