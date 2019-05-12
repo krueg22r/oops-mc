@@ -30,8 +30,7 @@ coordinates are supplied. The order of keywords does not matter, except for sect
 See the SampleInputs directory for several examples. The input file is provided as standard output. 
 
 For example, to run the sample grand canonical bulk simulation on the command 
-line, enter: 
-./mc <in.gcBulk >out.gcBulk &
+line, enter: ./mc <in.gcBulk >out.gcBulk &
 
 ## Authors
 
